@@ -1,10 +1,30 @@
 import styled from "styled-components";
 import Component from "./components/escena/escena";
 
-export const Button = styled(Component)`
-width: 950px;
-height: 70px;
-background: white;
-border-radios: 5px;
+export const ComponentStyled = styled(Component) `
+width: 90%;
+height: 35px;
 border: 1px solid black;
+border-radius: 50px;
+background-color: white;
+
+// &:hover {
+//     background: pink;
+// }
+`;
+
+export const Button = styled.button `
+width: 90%;
+height: 35px;
+border: 1px solid black;
+border-radius: 50px;
+background-color: white;
+font-size: 20px;
+margin-bottom: 10px;
+`;
+
+export const PreviousNext = styled(Button)`
+width: 45%;
+background-color: LightSalmon;
+border-radius: 0;
 `;

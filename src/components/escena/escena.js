@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+// import { useRef } from 'react';
 
-const Component = (props) => ( 
-    <div>
+
+const Component = (props) => (  
         <button> 
-            {props.param1}
-            {props.param2}
-            {props.param3}
-            {props.param4} 
-        </button>
-    </div>
-            
+            {props.texto}
+        </button> 
     );
 
 
 export default Component;
+
+
+export const makeThings = () => {
+    
+    alert(11);
+};
