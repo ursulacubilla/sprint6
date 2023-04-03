@@ -1,25 +1,27 @@
-// import logo from './logo.svg';
 import './App.css';
-import Component, { makeThings } from './components/escena/escena';
 import { ComponentStyled, Button, PreviousNext } from './styled';
+import { useState } from 'react';
 
 
 
 function App() {
+  const [count, setCount] = useState(0);
+  
   return (
     <div className="App">
 
-      <PreviousNext>"Anterior"</PreviousNext>
+      <PreviousNext onClick={() => setCount(count - 1)} texto="Anterior" />
 
-      <PreviousNext>"Siguiente"</PreviousNext>
+      <PreviousNext onClick={() => setCount(count + 1)} texto="Siguiente" />
 
-      <Button>"Nuestro héroe estaba flotando por el espacio sideral cuando a lo lejos divisó una nave espacial."</Button>
+      <ComponentStyled isActive={count === 1} texto="Nuestro héroe estaba flotando por el espacio sideral cuando a lo lejos divisó una nave espacial." />
 
-      <Button>"Sentía curiosidad por el interior de la nave y se puso a inspeccionarla. Llegó a una sala con dos puestas."</Button>
+      <ComponentStyled isActive={count === 2} texto="Sentía curiosidad por el interior de la nave y se puso a inspeccionarla. Llegó a una sala con dos puestas." />
 
-      <Button>"El héroe decidió atravesar la puerta que lo llevaba a casa."</Button>
+      <ComponentStyled isActive={count === 3} texto="El héroe decidió atravesar la puerta que lo llevaba a casa." />
       <div>
-        <Button>"Mientras tanto, otros héroes no tuvieron tanta suerte en su elección..."</Button>
+        <ComponentStyled isActive={count >= 4} texto="Mientras tanto, otros héroes no tuvieron tanta suerte en su elección..." />
+
       </div>
 
     </div>
