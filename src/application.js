@@ -16,7 +16,7 @@ function Application() {
   
         <ComponentStyled isActive={count === 1} texto="Nuestro héroe estaba flotando por el espacio sideral cuando a lo lejos divisó una nave espacial." />
   
-        <ComponentStyled isActive={count === 2} texto="Sentía curiosidad por el interior de la nave y se puso a inspeccionarla. Llegó a una sala con dos puestas." />
+        <ComponentStyled isActive={count === 2} texto="Sentía curiosidad por el interior de la nave y se puso a inspeccionarla. Llegó a una sala con dos puertas." />
   
         <ComponentStyled isActive={count === 3} texto="El héroe decidió atravesar la puerta que lo llevaba a casa." />
   
