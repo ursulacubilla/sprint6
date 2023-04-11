@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-// import { useRef } from 'react';
+import React from 'react';
 
 
 const Component = (props) => ( 
@@ -7,7 +6,6 @@ const Component = (props) => (
         {props.texto}
     </button>
 );
-
 
 export default Component;
 
