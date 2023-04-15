@@ -1,28 +1,30 @@
 import React from 'react';
-import { ComponentStyled, PreviousNext } from './styled';
+import { ComponentStyled, Div, PreviousNext } from './styled';
 import { useState } from 'react';
+import images from './assets/images';
 
 
 function Application() {
 
     const [count, setCount] = useState(0);
-  
+    
     return (
-      <div>
+      <Div image={ count >= 1 && count <= 4 ? images[count - 1].img : ""}>
   
-        <PreviousNext onClick={() => setCount(count - 1)} texto="Anterior" />
+        <PreviousNext onClick={() => setCount(count - 1)} text="Anterior" />
   
-        <PreviousNext onClick={() => setCount(count + 1)} texto="Siguiente" />
+        <PreviousNext onClick={() => setCount(count + 1)} text="Siguiente" />
   
-        <ComponentStyled isActive={count === 1} texto="Nuestro héroe estaba flotando por el espacio sideral cuando a lo lejos divisó una nave espacial." />
+        
+        <ComponentStyled isActive={count === 1} text={images[0].txt} />
+           
+        <ComponentStyled isActive={count === 2} text={images[1].txt} />
   
-        <ComponentStyled isActive={count === 2} texto="Sentía curiosidad por el interior de la nave y se puso a inspeccionarla. Llegó a una sala con dos puertas." />
+        <ComponentStyled isActive={count === 3} text={images[2].txt} />
   
-        <ComponentStyled isActive={count === 3} texto="El héroe decidió atravesar la puerta que lo llevaba a casa." />
+        <ComponentStyled isActive={count >= 4} text={images[3].txt}/>
   
-        <ComponentStyled isActive={count >= 4} texto="Mientras tanto, otros héroes no tuvieron tanta suerte en su elección..." />
-  
-      </div>
+      </Div>
     );
   };
   
